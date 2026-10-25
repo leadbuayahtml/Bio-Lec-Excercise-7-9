@@ -1,0 +1,1152 @@
+<!doctype html><html lang="en"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Bio 10 Study Guide: Exercises 7, 8 and 9</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+/* Layout: sticky chunk rail on the left, one short chunk at a time on the right. Stacks to a row of numbered buttons on phones. */
+:root {
+  --bg: #F2F5F2;
+  --surface: #FFFFFF;
+  --surface-2: #E7EEE9;
+  --fg: #15211B;
+  --muted: #54645B;
+  --line: #CCD8D0;
+  --accent: #1D6A4C;
+  --accent-ink: #FFFFFF;
+  --accent-soft: #D9EBE2;
+  --mark: #8E1F30;
+  --good: #1B7A45;
+  --good-soft: #DDF0E3;
+  --bad: #B03020;
+  --bad-soft: #F7DEDA;
+  --f-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --f-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0F1713; --surface: #16211B; --surface-2: #1F2D25; --fg: #E3ECE6; --muted: #9BAEA3; --line: #2B3C32;
+    --accent: #5CC49A; --accent-ink: #0B1510; --accent-soft: #1B3328; --mark: #F08A97;
+    --good: #6FD39A; --good-soft: #1A3326; --bad: #F29080; --bad-soft: #3A1F1B;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0F1713; --surface: #16211B; --surface-2: #1F2D25; --fg: #E3ECE6; --muted: #9BAEA3; --line: #2B3C32;
+  --accent: #5CC49A; --accent-ink: #0B1510; --accent-soft: #1B3328; --mark: #F08A97;
+  --good: #6FD39A; --good-soft: #1A3326; --bad: #F29080; --bad-soft: #3A1F1B;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--f-body);
+  font-size: 17px;
+  line-height: 1.6;
+  padding-block: 28px 56px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 1080px; margin: 0 auto; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.sp { font-style: italic; }
+
+.top { display: grid; gap: 8px; margin-bottom: 26px; }
+.kicker { font-family: var(--f-mono); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 0; }
+h1 { font-family: var(--f-display); font-weight: 700; font-size: clamp(1.9rem, 5vw, 2.9rem); line-height: 1.05; letter-spacing: -.02em; margin: 0; text-wrap: balance; }
+.lede { margin: 0; color: var(--muted); max-width: 62ch; }
+
+.layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 28px; align-items: start; }
+nav { position: sticky; top: 16px; min-width: 0; }
+.prog { display: grid; gap: 8px; }
+.pc { margin: 0; font-size: .95rem; color: var(--muted); }
+.pc strong { color: var(--fg); font-family: var(--f-mono); font-weight: 500; }
+.bar { height: 6px; border-radius: 3px; background: var(--surface-2); overflow: hidden; }
+.bar span { display: block; height: 100%; background: var(--accent); }
+@media (prefers-reduced-motion: no-preference) { .bar span { transition: width .3s ease; } }
+.steps { list-style: none; margin: 14px 0 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+.step button { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 10px; align-items: center; width: 100%; text-align: left; background: none; border: 0; padding: 7px 10px; border-radius: 8px; font: inherit; font-size: .95rem; line-height: 1.3; color: var(--fg); cursor: pointer; }
+.step button:hover { background: var(--surface-2); }
+.step[aria-current="step"] button { background: var(--surface); box-shadow: inset 0 0 0 1px var(--line); font-weight: 600; }
+.step .n { display: grid; place-items: center; width: 28px; height: 28px; border: 1px solid var(--line); border-radius: 6px; font-family: var(--f-mono); font-size: .8rem; background: var(--surface); }
+.step.done .n { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.linkbtn { margin-top: 14px; background: none; border: 0; padding: 0; font: inherit; font-size: .85rem; color: var(--muted); text-decoration: underline; cursor: pointer; }
+
+.chunk { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: clamp(18px, 4vw, 32px); display: grid; gap: 22px; min-width: 0; }
+.eyebrow { font-family: var(--f-mono); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0; }
+h2 { font-family: var(--f-display); font-weight: 700; font-size: clamp(1.6rem, 4vw, 2.15rem); line-height: 1.1; letter-spacing: -.015em; margin: 4px 0 0; text-wrap: balance; }
+h3 { font-family: var(--f-display); font-weight: 500; font-size: 1.1rem; margin: 0; }
+.label { font-family: var(--f-mono); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0; }
+.intro { margin: 0; max-width: 65ch; }
+.points { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; max-width: 70ch; }
+.points li { position: relative; padding-left: 22px; }
+.points li::before { content: ""; position: absolute; left: 2px; top: .7em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+.points strong, .intro strong { font-weight: 600; }
+.small { font-size: .9rem; color: var(--muted); margin: 0; }
+.note { font-size: .92rem; color: var(--muted); margin: 0; max-width: 68ch; }
+.note a, .small a { color: var(--accent); }
+
+.panel { background: var(--surface-2); border-radius: 10px; padding: 16px; display: grid; gap: 14px; min-width: 0; }
+.row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; }
+.btn { font: inherit; font-weight: 600; font-size: .95rem; padding: 9px 15px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); cursor: pointer; }
+.btn:hover { border-color: var(--accent); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.btn.small { padding: 5px 11px; font-size: .85rem; }
+.btn[disabled] { opacity: .45; cursor: default; }
+.btn[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); }
+
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag { font-family: var(--f-mono); font-size: .8rem; padding: 3px 9px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface-2); }
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.cell { border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 6px; align-content: start; }
+.cell p { margin: 0; }
+.jobs { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; counter-reset: j; max-width: 70ch; }
+.jobs li { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 10px; }
+.jobs li::before { counter-increment: j; content: counter(j); display: grid; place-items: center; width: 28px; height: 28px; border-radius: 6px; background: var(--accent-soft); font-family: var(--f-mono); font-size: .8rem; }
+
+/* tap-to-reveal mode */
+.cloak { font: inherit; color: inherit; background: none; border: 0; padding: 0; text-align: inherit; cursor: default; display: inline; }
+.cloak.blk { display: block; width: 100%; }
+[data-cloak="on"] .cloak:not(.shown) { color: transparent; background: var(--line); border-radius: 4px; cursor: pointer; -webkit-user-select: none; user-select: none; }
+.terms { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; }
+.term { background: var(--surface); border-radius: 10px; padding: 14px 16px; display: grid; gap: 6px; align-content: start; }
+.term p { margin: 0; font-size: .97rem; }
+.bar2 { display: flex; justify-content: flex-start; }
+
+/* ranks ladder */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font: inherit; font-size: .92rem; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 600; }
+.ladder { display: grid; gap: 6px; }
+.rung { --step: 12px; display: grid; grid-template-columns: 8rem minmax(0, 1fr); gap: 10px; align-items: baseline; padding: 8px 12px; border-radius: 8px; background: var(--surface); margin-left: calc(var(--i) * var(--step)); }
+.rung .r { font-family: var(--f-mono); font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.rung .cloak { font-weight: 600; }
+.rung.sp-row .cloak { font-style: italic; }
+
+/* dichotomous key */
+.keygrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 14px; }
+.keybox, .walkbox { background: var(--surface); border-radius: 10px; padding: 14px 16px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.kc { display: grid; gap: 2px; padding: 6px 8px; border-radius: 8px; }
+.kc.on { background: var(--accent-soft); }
+.kl { display: flex; align-items: baseline; gap: 8px; font-size: .97rem; }
+.kl .num { font-family: var(--f-mono); width: 1.4rem; flex: none; color: var(--muted); }
+.kl .dots { flex: 1; min-width: 12px; border-bottom: 2px dotted var(--line); transform: translateY(-4px); }
+.kl .lead { font-weight: 600; }
+.spec { margin: 0; font-weight: 600; }
+.res { padding: 10px 12px; border-radius: 8px; }
+.res.good { background: var(--good-soft); color: var(--fg); }
+.res.bad { background: var(--bad-soft); color: var(--fg); }
+
+/* plants tree */
+.ptree, .ptree ul { list-style: none; margin: 0; padding-left: 18px; border-left: 2px solid var(--line); }
+.ptree { border-left: 0; padding-left: 0; }
+.ptree li { padding: 3px 0 3px 8px; }
+.ptree li > span { font-weight: 600; }
+.todo { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 10px; align-items: start; cursor: pointer; padding: 6px 0; }
+.todo input { width: 18px; height: 18px; margin: 3px 0 0; accent-color: var(--accent); }
+.todo input:checked + span { color: var(--muted); text-decoration: line-through; }
+
+/* tables */
+.tw { overflow-x: auto; border-radius: 8px; }
+table { border-collapse: collapse; width: 100%; min-width: 460px; background: var(--surface); }
+th, td { text-align: left; vertical-align: top; padding: 9px 12px; border-bottom: 1px solid var(--line); font-size: .95rem; }
+thead th { font-family: var(--f-mono); font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+tbody th { font-weight: 600; width: 28%; }
+.diff td, .diff th { background: var(--accent-soft); }
+.ne { font-family: var(--f-mono); font-size: .68rem; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); margin-left: 6px; }
+.cmpbar { display: flex; flex-wrap: wrap; gap: 12px; }
+.cmpbar label { display: grid; gap: 4px; font-family: var(--f-mono); font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+select { font: inherit; font-size: .95rem; padding: 7px 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); min-width: 11rem; }
+
+/* quizzes */
+.checks { display: grid; gap: 12px; }
+.q, .dq-box { border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 10px; background: var(--surface); }
+.q > p, .dq { margin: 0; font-weight: 600; }
+.opts { display: grid; gap: 8px; }
+.opt { font: inherit; text-align: left; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--fg); cursor: pointer; }
+.opt:hover:not([disabled]) { border-color: var(--accent); }
+.opt.right { background: var(--good-soft); border-color: var(--good); opacity: 1; }
+.opt.wrong { background: var(--bad-soft); border-color: var(--bad); opacity: 1; }
+.opt[disabled] { cursor: default; color: var(--fg); }
+.fb { margin: 0; font-size: .95rem; color: var(--muted); min-height: 1.4em; }
+.fb.good { color: var(--good); }
+.fb.bad { color: var(--bad); }
+.score { font-family: var(--f-mono); font-size: .8rem; color: var(--muted); }
+
+.foot { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; border-top: 1px solid var(--line); padding-top: 16px; }
+.stat { font-family: var(--f-mono); font-size: .8rem; color: var(--muted); }
+
+@media (max-width: 860px) {
+  .layout { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  nav { position: static; }
+  .steps { flex-direction: row; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+  .step button { grid-template-columns: 1fr; width: auto; padding: 0; background: none !important; box-shadow: none !important; }
+  .step .t { display: none; }
+  .step .n { width: 36px; height: 36px; }
+  .step[aria-current="step"] .n { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent); }
+  .rung { --step: 3px; grid-template-columns: 6.2rem minmax(0, 1fr); }
+}
+
+/* svg tree */
+.tree { width: 100%; max-width: 560px; height: auto; }
+.tl { stroke: var(--fg); stroke-width: 2; fill: none; stroke-linecap: round; }
+.tn { fill: var(--accent); }
+.tt { fill: var(--fg); font: 15px var(--f-body); }
+.tm { fill: var(--muted); font: 12px var(--f-mono); }
+
+/* ---------- added for the combined guide (exercise tabs, Exercises 7 and 9) ---------- */
+.exbar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+.extab { font: inherit; font-size: .97rem; padding: 9px 16px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); cursor: pointer; display: inline-flex; align-items: baseline; gap: 8px; }
+.extab:hover { border-color: var(--accent); }
+.extab[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 600; }
+.extab .ct { font-family: var(--f-mono); font-size: .75rem; opacity: .8; }
+.eq { margin: 0; font-family: var(--f-mono); font-size: clamp(.95rem, 2.6vw, 1.2rem); text-align: center; padding: 8px 4px; overflow-wrap: anywhere; }
+.outg { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+.ocell { background: var(--surface); border-radius: 10px; padding: 14px 16px; display: grid; gap: 8px; justify-items: start; align-content: start; }
+.ocell p { margin: 0; font-size: .97rem; }
+.ocell .nm { font-weight: 600; }
+.sw { width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--fg); }
+.sw.tube { width: 30px; height: 58px; border-radius: 4px 4px 16px 16px; }
+.sw.leaf { width: 58px; height: 38px; border-radius: 60% 0 60% 0; }
+.hint { margin: 0; color: var(--muted); font-size: .95rem; }
+</style>
+
+<div class="wrap">
+  <div class="exbar" id="exbar" role="group" aria-label="Exercises"></div>
+  <header class="top">
+    <p class="kicker" id="hkick"></p>
+    <h1 id="htitle"></h1>
+    <p class="lede" id="hlede"></p>
+  </header>
+  <div class="layout">
+    <nav id="nav" aria-label="Chunks"></nav>
+    <main id="main"></main>
+  </div>
+</div>
+
+<script>
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+const rnd = n => Math.floor(Math.random() * n);
+const shuffle = a => { const b = a.slice(); for (let i = b.length - 1; i > 0; i--) { const j = rnd(i + 1); [b[i], b[j]] = [b[j], b[i]]; } return b; };
+
+const KEYSTORE = 'bio10-ex789';
+let S = { ex: 7, cur: 0, curs: { 7: 0, 8: 0, 9: 0 }, ok: {}, todo: {} };
+try {
+  const raw = localStorage.getItem(KEYSTORE);
+  if (raw) { S = Object.assign(S, JSON.parse(raw)); }
+  else {
+    // carry over progress saved by the standalone Exercise 8 guide
+    const old = localStorage.getItem('bio10-ex8');
+    if (old) { const o = JSON.parse(old); S.ok = o.ok || {}; S.todo = o.todo || {}; S.curs[8] = o.cur || 0; S.ex = 8; }
+  }
+} catch (e) {}
+if (!S.curs) S.curs = { 7: 0, 8: 0, 9: 0 };
+if (![7, 8, 9].includes(S.ex)) S.ex = 7;
+function save() { try { S.curs[S.ex] = S.cur; localStorage.setItem(KEYSTORE, JSON.stringify(S)); } catch (e) {} }
+
+/* ---------- data: Exercise 8 (unchanged) ---------- */
+const TERMS = [
+  ['Taxonomy', 'Theory and practice of classifying organisms.'],
+  ['Identification', 'Placing individuals into previously established classes by deductive procedures.'],
+  ['Classification', 'Ordering organisms into a hierarchy of categories.'],
+  ['Hierarchy', 'An orderly array made of a series of inclusive levels called categories.'],
+  ['Category', 'A rank or level in a hierarchic classification. Examples: kingdom, phylum, division, class, order, family, genus, species.'],
+  ['Taxon', 'Any distinctive group worthy of being assigned to a definite category. Higher taxa: birds, vertebrates. Lower taxa: maya, dog, man.'],
+  ['Phenon', 'A phenotypically uniform sample at the species level. The term is specific to insects, where males and females often belong to different phena.'],
+  ['Nomenclature', 'Giving a distinctive name to an organism based on a particular classification scheme.']
+];
+const RANKS = ['Domain', 'Kingdom', 'Phylum', 'Class', 'Order', 'Family', 'Genus', 'Specific epithet', 'Species name'];
+const ORG = [
+  { n: 'Archean', v: ['Archaea', 'Archaebacteria', 'Deinococcus–Thermus', 'Deinococci', 'Thermales', 'Thermaceae', 'Thermus', 'aquaticus', 'Thermus aquaticus'] },
+  { n: 'Bacteria', v: ['Bacteria', 'Eubacteria', 'Proteobacteria', 'Gammaproteobacteria', 'Eubacteriales', 'Enterobacteriaceae', 'Klebsiella', 'pneumonia', 'Klebsiella pneumonia'] },
+  { n: 'Amoeba', v: ['Eukarya', 'Protista', 'Sarcodina', 'Lobosa', 'Amoebina', 'Amoebaea', 'Amoeba', 'Proteus', 'Amoeba proteus'] },
+  { n: 'Bread mold', v: ['Eukarya', 'Fungi', 'Zygomycota', 'Zygomycetes', 'Mucorina', 'Mucoracea (Graminae)', 'Rhizopus', 'stolonifer', 'Rhizopus stolonifer'] },
+  { n: 'Rice', v: ['Eukarya', 'Plantae', 'Anthophyta', 'Liliopsida', 'Poales', 'Poaceae', 'Oryza', 'sativa', 'Oryza sativa'] },
+  { n: 'Man', v: ['Eukarya', 'Animalia', 'Chordata', 'Mammalia', 'Primate', 'Hominidae', 'Homo', 'sapiens', 'Homo sapiens'] }
+];
+const KEY = {
+  1: [['Parallel leaf', '2'], ['Netted leaf', '3']],
+  2: [['Herbaceous habit', 'spider lily'], ['Tree-like habit', 'coconut']],
+  3: [['Has thorns on its stem', 'rose'], ['Without thorns on its stem', '4']],
+  4: [['Has yellow flower', 'sunflower'], ['Has red flower', 'gumamela']]
+};
+const MYST = [
+  { n: 'spider lily', t: 'Parallel leaves, herbaceous habit.' },
+  { n: 'coconut', t: 'Parallel leaves, tree-like habit.' },
+  { n: 'rose', t: 'Netted leaves, thorns on the stem.' },
+  { n: 'sunflower', t: 'Netted leaves, no thorns, yellow flower.' },
+  { n: 'gumamela', t: 'Netted leaves, no thorns, red flower.' }
+];
+const PH = [
+  { p: 'Porifera', c: 'sponge', g: 'Scypha' },
+  { p: 'Cnidaria', c: 'jellyfish', g: 'Aurelia' },
+  { p: 'Platyhelminthes', c: 'flatworm', g: 'Schistosoma' },
+  { p: 'Nematoda', c: 'roundworm', g: 'Ascaris' },
+  { p: 'Annelida', c: 'earthworm', g: 'Lumbricus' },
+  { p: 'Mollusca', c: 'snail', g: 'Helix' },
+  { p: 'Arthropoda', c: 'cockroach', g: 'Periplaneta' },
+  { p: 'Echinodermata', c: 'starfish', g: null },
+  { p: 'Chordata', c: 'frog', g: 'Bufo' }
+];
+const FEATS = ['Level of organization', 'Germ layers', 'Type of coelom', 'Symmetry', 'Body plan', 'Segmentation'];
+const DET = {
+  Porifera: ['Cellular (no true tissues)', 'None', 'None (acoelomate)', 'Asymmetrical or radial', 'Porous body with water canals and a central cavity', 'Not segmented'],
+  Cnidaria: ['Tissue', 'Two (diploblastic)', 'None (acoelomate)', 'Radial', 'Sac with one opening (gastrovascular cavity)', 'Not segmented'],
+  Platyhelminthes: ['Organ', 'Three (triploblastic)', 'None (acoelomate)', 'Bilateral', 'Solid body, gut with one opening', 'Not segmented'],
+  Nematoda: ['Organ system', 'Three (triploblastic)', 'Pseudocoelom', 'Bilateral', 'Tube within a tube, cylindrical', 'Not segmented'],
+  Annelida: ['Organ system', 'Three (triploblastic)', 'True coelom', 'Bilateral', 'Tube within a tube', 'Segmented'],
+  Mollusca: ['Organ system', 'Three (triploblastic)', 'True coelom (reduced)', 'Bilateral (snails are twisted by torsion)', 'Head-foot, visceral mass and mantle', 'Not segmented'],
+  Arthropoda: ['Organ system', 'Three (triploblastic)', 'Hemocoel (reduced coelom)', 'Bilateral', 'Jointed appendages and an exoskeleton', 'Segmented'],
+  Echinodermata: ['Organ system', 'Three (triploblastic)', 'True coelom', 'Radial as adults, bilateral as larvae', 'Spiny skin and a water vascular system', 'Not segmented'],
+  Chordata: ['Organ system', 'Three (triploblastic)', 'True coelom', 'Bilateral', 'Notochord, dorsal hollow nerve cord, pharyngeal slits', 'Segmented (vertebrae, muscle blocks)']
+};
+
+/* ---------- small builders ---------- */
+const todoHTML = (key, text) => `<label class="todo"><input type="checkbox" data-todo="${key}" ${S.todo[key] ? 'checked' : ''}><span>${text}</span></label>`;
+const cloakBtn = () => `<div class="bar2"><button type="button" class="btn small" data-cloak-toggle data-off-text="Quiz me: hide the answers" data-on-text="Show all answers" aria-pressed="false">Quiz me: hide the answers</button></div>`;
+/* cloaked term cards: [[title, text], ...] */
+const cardsHTML = arr => `<div class="panel cloakable" data-cloak="off">${cloakBtn()}<div class="terms">${arr.map(([t, d]) => `<div class="term"><h3>${t}</h3><p><button type="button" class="cloak blk">${d}</button></p></div>`).join('')}</div></div>`;
+/* plain comparison table: rows [label, a, b, differs] */
+const cmpHTML = (head, rows) => `<div class="tw"><table><thead><tr><th>${head[0]}</th><th>${head[1]}</th><th>${head[2]}</th></tr></thead><tbody>${rows.map(r => `<tr class="${r[3] ? 'diff' : ''}"><th scope="row">${r[0]}${r[3] ? '<span class="ne">differs</span>' : ''}</th><td>${r[1]}</td><td>${r[2]}</td></tr>`).join('')}</tbody></table></div>`;
+/* checklist tags */
+const tagsHTML = arr => `<div class="tags">${arr.map(x => `<span class="tag">${x}</span>`).join('')}</div>`;
+
+const TREE = `<svg class="tree" viewBox="0 0 560 230" role="img" aria-label="A simple phylogenetic tree. One common ancestor splits into two lineages, and each splits into two species.">
+  <path class="tl" d="M8 110 H130 M130 65 V155 M130 65 H240 M130 155 H240 M240 40 V90 M240 130 V180 M240 40 H460 M240 90 H460 M240 130 H460 M240 180 H460"/>
+  <circle class="tn" cx="130" cy="110" r="5"/><circle class="tn" cx="240" cy="65" r="5"/><circle class="tn" cx="240" cy="155" r="5"/>
+  <text class="tm" x="8" y="97">Common ancestor</text>
+  <text class="tm" x="142" y="55">Branch point</text>
+  <text class="tt" x="470" y="45">Species A</text><text class="tt" x="470" y="95">Species B</text>
+  <text class="tt" x="470" y="135">Species C</text><text class="tt" x="470" y="185">Species D</text>
+  <text class="tm" x="8" y="216">Branch lengths carry no time or amount of genetic change.</text>
+</svg>`;
+
+/* ---------- chunks: Exercise 8 (unchanged) ---------- */
+const CH8 = [
+  {
+    t: 'Phylogeny vs systematics', min: 3,
+    pts: [
+      '<strong>Phylogeny</strong> is the evolutionary history of a species or of a group of related species.',
+      'A <strong>phylogenetic tree</strong> draws that history as branching relationships. It shows patterns of descent.',
+      'A tree does not tell you when a species evolved, or how much genetic change a lineage went through.',
+      '<strong>Systematics</strong> is the classification of organisms, and the discipline that works out their evolutionary relationships from fossil, genetic and molecular data.',
+      'It is the scientific study of the kinds and diversity of organisms and how they relate. It supplies what you need to classify organisms and to build the phylogeny of life.'
+    ],
+    ex: () => `<div class="panel"><p class="label">Reading a tree</p>${TREE}</div>`,
+    qs: [
+      { q: 'Which statement about a phylogenetic tree is correct?', o: ['It shows patterns of descent between related species', 'It shows the exact date each species evolved', 'It measures how much genetic change each lineage went through', 'It ranks species from primitive to advanced'], a: 0, why: 'A tree shows branching descent. It does not date the branches or measure genetic change.' },
+      { q: 'Which data does systematics use to infer evolutionary relationships?', o: ['Common names and folk uses', 'Fossil, genetic and molecular data', 'Habitat and geographic range only', 'Body size only'], a: 1, why: 'Fossil, genetic and molecular data are the three sources the handout names.' }
+    ]
+  },
+  {
+    t: 'Eight key terms', min: 4,
+    intro: 'These terms appear throughout the lab. Read them once, then switch on quiz mode and say each definition aloud before you tap to check it.',
+    ex: () => `<div class="panel cloakable" data-cloak="off">${cloakBtn()}<div class="terms">${TERMS.map(([t, d]) => `<div class="term"><h3>${t}</h3><p><button type="button" class="cloak blk">${d}</button></p></div>`).join('')}</div></div>`,
+    qs: [
+      { q: 'You compare a beetle against a key and place it in a group that was already described. Which term fits?', o: ['Classification', 'Nomenclature', 'Identification', 'Phenon'], a: 2, why: 'Identification places an individual into a previously established class. Classification builds the hierarchy itself.' },
+      { q: '“Mammalia” is a ___, and “class” is a ___.', o: ['category, taxon', 'taxon, category', 'phenon, taxon', 'taxon, hierarchy'], a: 1, why: 'A taxon is an actual group. A category is the rank that the group is assigned to.' },
+      { q: 'Males and females of one insect species often belong to different…', o: ['Genera', 'Divisions', 'Domains', 'Phena'], a: 3, why: 'A phenon is a phenotypically uniform sample at the species level, so the two sexes can fall into separate phena.' }
+    ]
+  },
+  {
+    t: 'Classifying and naming', min: 3,
+    intro: 'Millions of kinds of organisms make classification necessary. It does four jobs:',
+    ex: () => `<ol class="jobs">
+        <li><span>Devise schemes that help you recognize different kinds of organisms.</span></li>
+        <li><span>Assign names to the different kinds.</span></li>
+        <li><span>Group organisms in a “filing system” so information can be stored and retrieved.</span></li>
+        <li><span>Decide which characteristics to use as taxonomic criteria.</span></li>
+      </ol>
+      <div class="panel"><p class="label">Common taxonomic criteria</p>
+        <div class="tags">${['cell type', 'level of organization', 'mode of nutrition', 'motility', 'mode of reproduction', 'embryonic origin', 'symmetry', 'homology', 'analogy'].map(x => `<span class="tag">${x}</span>`).join('')}</div>
+      </div>
+      <div class="two">
+        <div class="cell"><h3>Artificial classification</h3><p>Based on convenient, conspicuous characteristics. It does not indicate phylogenetic relationships.</p></div>
+        <div class="cell"><h3>Natural classification</h3><p>Based on the totality of biological characteristics, including inferences about genetic relationships among organisms.</p></div>
+      </div>`,
+    qs: [
+      { q: 'A scheme groups organisms by convenient, conspicuous features and says nothing about relatedness. What is it?', o: ['Natural classification', 'Phylogenetic classification', 'Artificial classification', 'Molecular classification'], a: 2, why: 'Artificial classification uses convenient features and does not indicate phylogenetic relationships.' },
+      { q: 'Which of these is NOT a taxonomic criterion in the handout?', o: ['Mode of nutrition', 'Embryonic origin', 'Symmetry', 'Which collector found the specimen'], a: 3, why: 'The handout lists cell type, level of organization, nutrition, motility, reproduction, embryonic origin, symmetry, homology and analogy.' }
+    ]
+  },
+  {
+    t: 'Ranks and domains', min: 5,
+    pts: [
+      'The hierarchy was devised in the 18th century by the Swedish botanist Carolus Linnaeus.',
+      'Its categories run from broadest to narrowest: kingdom, phylum, class, order, family, genus, species. Plurals: phyla, genera, species. In plants, <strong>division</strong> takes the place of phylum.',
+      'The <strong>three-domain system</strong> now sits above kingdom: Archaea, Bacteria and Eukarya. It was adopted because classifying under kingdoms became complicated once molecular data showed differences.',
+      'Memory aid, not from the handout: <em>Dear King Philip Came Over For Good Soup</em> (domain, kingdom, phylum, class, order, family, genus, species).'
+    ],
+    ex: () => `<div class="panel cloakable" data-cloak="off">
+        <p class="label">Table 1, one organism at a time</p>
+        <div class="chips" id="chips">${ORG.map((o, i) => `<button type="button" class="chip" data-org="${i}" aria-pressed="false">${o.n}</button>`).join('')}</div>
+        ${cloakBtn()}
+        <div class="ladder" id="ladder"></div>
+        <p class="note">Species name is the genus plus the specific epithet. Two details in the handout’s table: the bread mold family cell reads “Mucoracea (Graminae)”, and Graminae is an older name for the grass family, so Mucoracea is the mold’s family. The bacterium’s epithet is printed “pneumonia”, and the usual spelling is “pneumoniae”. Learn the handout’s version for your quiz and ask your instructor which one they want.</p>
+      </div>`,
+    init: () => drawLadder(),
+    qs: [
+      { q: 'Which rank sits directly above genus?', o: ['Order', 'Species', 'Class', 'Family'], a: 3, why: 'The order is kingdom, phylum, class, order, family, genus, species.' },
+      { q: 'Which organism in Table 1 belongs to Kingdom Fungi?', o: ['Rice', 'Amoeba', 'Bread mold', 'Man'], a: 2, why: 'Bread mold (Rhizopus stolonifer) is the fungus in the table.' },
+      { q: 'Why was a domain level added above kingdom?', o: ['Linnaeus asked for it', 'Molecular data made classifying under kingdoms complicated', 'Fossils were found for every kingdom', 'Plants and animals were merged'], a: 1, why: 'Differences in molecular data complicated the kingdom system, so domains were added.' }
+    ]
+  },
+  {
+    t: 'Dichotomous keys', min: 4,
+    pts: [
+      'A <strong>key</strong> is a device systematists use to determine the identity of an organism.',
+      'Natural keys try to express relationships. Most keys are artificial. They only separate similar but not identical kinds.',
+      'A <strong>dichotomous key</strong> arranges contrasting characters in pairs. You pick the statement that fits your organism. It sends you to the next pair or gives you a name.',
+      'The identity comes out by a process of elimination.'
+    ],
+    ex: () => `<div class="panel"><p class="label">Run the handout’s sample plant key</p>
+        <div class="keygrid">
+          <div class="keybox" id="keytext">${Object.keys(KEY).map(n => `<div class="kc" data-c="${n}">${KEY[n].map((c, i) => `<div class="kl"><span class="num">${i === 0 ? n + '.' : ''}</span><span>${c[0]}</span><span class="dots"></span><span class="lead">${c[1]}</span></div>`).join('')}</div>`).join('')}</div>
+          <div class="walkbox" id="walk"></div>
+        </div>
+      </div>`,
+    init: () => drawWalker(),
+    qs: [
+      { q: 'A plant has netted leaves, no thorns and a red flower. The sample key gives…', o: ['Rose', 'Sunflower', 'Coconut', 'Gumamela'], a: 3, why: 'Netted leaf sends you from 1 to 3, no thorns sends you to 4, and a red flower gives gumamela.' },
+      { q: 'What does each step of a dichotomous key contain?', o: ['One statement to confirm', 'A pair of contrasting statements', 'Three options sorted by size', 'A drawing of the organism'], a: 1, why: 'Contrasting characters are arranged in pairs, and each choice leads onward.' },
+      { q: 'Most taxonomic keys are…', o: ['Artificial, separating similar kinds without showing relationships', 'Natural, showing relationships', 'Built only after DNA sequencing', 'Limited to plants'], a: 0, why: 'Natural keys exist, but most keys are artificial tools for separating similar kinds.' }
+    ]
+  },
+  {
+    t: 'Plant lab', min: 4,
+    pts: [
+      'You should be able to tell the major groups of Kingdom Plantae apart, link their unique structures to the right organisms, and recognize some families of Division Magnoliophyta.',
+      'You should also identify common flowering plants with a dichotomous key.',
+      'Study tip: parallel leaves point to monocots and netted leaves point to dicots. Couplet 1 of the sample key splits on exactly that.'
+    ],
+    ex: () => `<div class="two">
+        <div class="panel"><p class="label">Find one specimen for each</p>
+          <ul class="ptree"><li><span>Kingdom Plantae</span><ul><li>Bryophytes</li><li>Pteridophytes</li><li>Gymnosperms</li><li>Angiosperms<ul><li>Monocot</li><li>Dicot</li></ul></li></ul></li></ul>
+        </div>
+        <div class="panel"><p class="label">Field investigation</p>
+          ${todoHTML('p1', 'Find a representative plant for each group on the left.')}
+          ${todoHTML('p2', 'List 5 morphological characteristics per specimen. 2 must be unique to it.')}
+          ${todoHTML('p3', 'Draw the habit. Add the scientific name and the common name.')}
+          ${todoHTML('p4', 'Construct a dichotomous key that separates all your species.')}
+        </div>
+      </div>`,
+    qs: [
+      { q: 'For each specimen you list 5 characteristics. How many must be unique to that specimen?', o: ['1', '2', '3', 'All 5'], a: 1, why: 'The handout asks for 5 morphological characteristics, 2 of which are unique to the specimen.' },
+      { q: 'Which group is split into monocot and dicot?', o: ['Bryophytes', 'Pteridophytes', 'Gymnosperms', 'Angiosperms'], a: 3, why: 'Monocot and dicot are the two angiosperm subgroups in your list.' }
+    ]
+  },
+  {
+    t: 'The nine animal phyla', min: 5,
+    intro: 'Search online for one representative of each major phylum. For each one you list 5 characteristics, 2 of them unique, and then work out nine details (next chunk).',
+    ex: () => `<div class="panel cloakable" data-cloak="off">${cloakBtn()}
+        <div class="tw"><table><thead><tr><th>Phylum</th><th>Representative</th><th>Genus</th></tr></thead><tbody>
+          ${PH.map(x => `<tr><td><button type="button" class="cloak">${x.p}</button></td><td>${x.c}</td><td>${x.g ? `<span class="sp">${x.g}</span> sp.` : 'not given in the handout'}</td></tr>`).join('')}
+        </tbody></table></div>
+      </div>
+      <div class="panel"><p class="label">Drill</p><div class="dq-box" id="drill"></div></div>
+      <div class="panel"><p class="label">Field investigation</p>
+        ${todoHTML('a1', 'Find one specimen for each of the 9 phyla.')}
+        ${todoHTML('a2', 'List 5 morphological characteristics per specimen. 2 must be unique to it.')}
+        ${todoHTML('a3', 'Determine the nine details for each specimen.')}
+        ${todoHTML('a4', 'Construct a dichotomous key from observable morphological features.')}
+      </div>`,
+    init: () => drawDrill(),
+    qs: [
+      { q: 'Which genus represents Phylum Mollusca in the handout?', o: ['Lumbricus', 'Aurelia', 'Helix', 'Bufo'], a: 2, why: 'Helix, the snail, represents Mollusca.' },
+      { q: 'Which pair is correct?', o: ['Annelida, earthworm (Lumbricus)', 'Nematoda, flatworm (Schistosoma)', 'Arthropoda, frog (Bufo)', 'Cnidaria, sponge (Scypha)'], a: 0, why: 'Annelida is the earthworm. The roundworm is Nematoda, the flatworm is Platyhelminthes, and the frog is Chordata.' }
+    ]
+  },
+  {
+    t: 'Comparing phyla', min: 5,
+    intro: 'For every specimen the lab asks for nine details. Phylum, genus and common name are lookups. The other six describe the body, and they are what you compare between phyla.',
+    ex: () => `<div class="tags">${['phylum', 'genus', 'common name', 'level of organization', 'germ layers', 'type of coelom', 'symmetry', 'body plan', 'segmentation'].map(x => `<span class="tag">${x}</span>`).join('')}</div>
+      <div class="panel"><p class="label">Pick two phyla</p>
+        <div class="cmpbar">
+          <label>Phylum A<select id="selA">${PH.map(x => `<option>${x.p}</option>`).join('')}</select></label>
+          <label>Phylum B<select id="selB">${PH.map(x => `<option>${x.p}</option>`).join('')}</select></label>
+        </div>
+        <div class="tw"><table id="cmpT"></table></div>
+        <p class="note" id="cmpN"></p>
+        <p class="note">These are typical textbook values. Check them against your lab notes and the specimen you observe. The instructor also suggests the online Animal Phyla Guide and The Phylum Comparison Challenge to go with this lab.</p>
+      </div>`,
+    init: () => drawCompare(),
+    qs: [
+      { q: 'Roundworms such as Ascaris have which type of coelom?', o: ['True coelom', 'No coelom', 'Hemocoel', 'Pseudocoelom'], a: 3, why: 'Nematodes are pseudocoelomates.' },
+      { q: 'Which of these animals is radially symmetrical?', o: ['Earthworm', 'Snail', 'Cockroach', 'Jellyfish'], a: 3, why: 'Jellyfish (Cnidaria) are radial. The others are bilateral.' },
+      { q: 'Which phylum is diploblastic?', o: ['Platyhelminthes', 'Cnidaria', 'Annelida', 'Chordata'], a: 1, why: 'Cnidarians have two germ layers. The other three have three.' }
+    ]
+  },
+  {
+    t: 'Lab wrap-up', min: 4,
+    intro: 'Four mixed questions, then a list of what goes on the answer sheet.',
+    ex: () => `<div class="panel"><p class="label">Before you submit</p>
+        ${todoHTML('s1', 'Name, laboratory section, lab instructor, date performed and date submitted are filled in.')}
+        ${todoHTML('s2', 'Section I, Plant classification: specimens, characteristics, drawings with scientific and common names, and your key.')}
+        ${todoHTML('s3', 'Section II, Animal classification: nine phyla, nine details each, and your key.')}
+        ${todoHTML('s4', 'The online activities your instructor suggested are done.')}
+        <p class="note">The answer sheet is headed “Exercise 7” while the handout is Exercise 8. Use the sheet as given unless your instructor says otherwise.</p>
+        <p class="small">Handout adapted from Dickey (2003), Mader (1998) and Soligam-Hadsall et al. (2007).</p>
+      </div>`,
+    qs: [
+      { q: 'Which list runs from broadest to narrowest?', o: ['Kingdom, class, phylum, order, family, genus, species', 'Phylum, kingdom, class, order, genus, family, species', 'Kingdom, phylum, class, order, family, genus, species', 'Species, genus, family, order, class, phylum, kingdom'], a: 2, why: 'Kingdom, phylum, class, order, family, genus, species.' },
+      { q: 'Genus plus specific epithet gives you…', o: ['The species name', 'The family name', 'The phenon', 'The domain'], a: 0, why: 'Homo + sapiens gives the species name Homo sapiens.' },
+      { q: 'Which phylum has a pseudocoelom?', o: ['Annelida', 'Mollusca', 'Nematoda', 'Porifera'], a: 2, why: 'Nematoda are pseudocoelomates.' },
+      { q: 'Your dichotomous key for the plant lab should…', o: ['Include only the largest plant', 'Separate all the representative species you observed', 'Use only the common names', 'Replace the drawings'], a: 1, why: 'The handout asks for a key showing all representative species based on your observations.' }
+    ]
+  }
+];
+
+/* ---------- data and chunks: Exercise 7 (Photosynthesis) ---------- */
+const OUTD = {
+  tube: [
+    { label: 'Light for 24 h', cells: [
+      { n: 'Tube A: control', col: '#2F5FBF', shape: 'tube', t: 'Bromothymol blue only. It stays blue, so the indicator alone does not change.' },
+      { n: 'Tube B: CO₂ only', col: '#E5C62B', shape: 'tube', t: 'Yellow from the added CO₂, and it stays yellow. Nothing is removing the CO₂.' },
+      { n: 'Tube C: Elodea + CO₂', col: '#4E9A8A', shape: 'tube', t: 'Shifts back toward blue-green. Elodea photosynthesizes in the light and takes up the CO₂.' }
+    ] },
+    { label: 'Dark for 24 h (thought experiment)', cells: [
+      { n: 'Tube A: control', col: '#2F5FBF', shape: 'tube', t: 'Bromothymol blue only. Still blue.' },
+      { n: 'Tube B: CO₂ only', col: '#E5C62B', shape: 'tube', t: 'Still yellow.' },
+      { n: 'Tube C: Elodea + CO₂', col: '#E5C62B', shape: 'tube', t: 'Stays yellow. Without light there is no photosynthesis, and the plant keeps respiring and releasing CO₂.' }
+    ] }
+  ],
+  iod: [
+    { label: 'Uncovered part of the leaf', cells: [
+      { n: 'Uncovered area', col: '#1B2140', shape: 'leaf', t: 'Blue-black. Starch is present: the leaf made sugar in the light and stored it as starch.' }
+    ] },
+    { label: 'Part covered by black paper', cells: [
+      { n: 'Covered area', col: '#C9A24A', shape: 'leaf', t: 'Stays the yellow-brown of the iodine. Little or no starch, because no light reached this part.' }
+    ] }
+  ]
+};
+const OUT = { tube: -1, iod: -1 };
+const outHTML = (id, title) => `<div class="panel"><p class="label">${title}</p>
+  <div class="chips">${OUTD[id].map((it, i) => `<button type="button" class="chip" data-out="${id}" data-i="${i}" aria-pressed="false">${it.label}</button>`).join('')}</div>
+  <div class="outg" id="out-${id}"></div></div>`;
+
+const EQ = `<div class="panel"><p class="label">The simplified equation</p><p class="eq">n CO<sub>2</sub> + n H<sub>2</sub>O + light energy → n C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + n O<sub>2</sub></p></div>`;
+
+const CH7 = [
+  {
+    t: 'Photosynthesis in brief', min: 4,
+    pts: [
+      '<strong>Photosynthesis</strong> is how plants make their own food. Light energy is converted in the leaves to chemical energy in the form of sugars and organic compounds, and free oxygen is produced from carbon dioxide and water.',
+      'Plants are the major producers and source of nourishment in the whole biosphere.',
+      'The equation is an oversimplification of a very complicated process. Early studies found that photosynthesis has two stages.'
+    ],
+    ex: () => `${EQ}
+      <div class="two">
+        <div class="cell"><h3>Stage 1: light reaction</h3><p>Also called the light-dependent reaction. It focuses only on converting light into chemical energy, producing <strong>ATP</strong> and <strong>NADPH</strong>. It occurs in the <strong>thylakoid</strong> region of the chloroplast.</p></div>
+        <div class="cell"><h3>Stage 2: Calvin cycle</h3><p>The light-independent reaction, and the “sugar factory”. It takes place in the chloroplast’s <strong>stroma</strong>. Carbon is integrated into organic compounds (<strong>carbon fixation</strong>), then reduced by the addition of electrons to form carbohydrates.</p></div>
+      </div>
+      <div class="panel"><p class="label">By the end of the lab you can</p>
+        <ol class="jobs">
+          <li><span>Identify means of measuring the rate of photosynthesis.</span></li>
+          <li><span>Discuss factors that can affect photosynthesis.</span></li>
+          <li><span>Formulate a hypothesis on the effect of each of these factors.</span></li>
+          <li><span>Test the hypothesis using controls and analyze the experimental results.</span></li>
+        </ol>
+      </div>`,
+    qs: [
+      { q: 'Where does the light reaction take place?', o: ['Stroma', 'Thylakoid', 'Nucleus', 'Cell wall'], a: 1, why: 'The light reaction happens in the thylakoid region. The Calvin cycle happens in the stroma.' },
+      { q: 'Which products come out of the light reaction?', o: ['Glucose and O₂', 'CO₂ and H₂O', 'ATP and NADPH', 'Starch and chlorophyll'], a: 2, why: 'The light reaction converts light into chemical energy and produces ATP and NADPH.' },
+      { q: 'Carbon fixation is…', o: ['Releasing O₂ from water', 'Integrating carbon molecules into organic compounds in the Calvin cycle', 'Converting light into ATP', 'Bleaching leaves in ethanol'], a: 1, why: 'Carbon fixation is part of the Calvin cycle. The fixed carbons are then reduced to form carbohydrates.' }
+    ]
+  },
+  {
+    t: 'CO₂ uptake: bromothymol blue', min: 6,
+    pts: [
+      '<strong>Part A.1, beaker.</strong> Fill a 250 mL beaker with 150 mL distilled water and add an equal volume of bromothymol blue. Blow through a straw until the color changes from blue to yellow, then explain why.',
+      'Bromothymol blue is an indicator. Its color depends on the amount of CO₂ dissolved in the solution.',
+      'Why it happens (standard explanation, not spelled out in the handout): your breath adds CO₂, which dissolves and makes the water more acidic, so the indicator goes yellow.',
+      '<strong>Part A.2, Elodea sprigs.</strong> Pour equal amounts of bromothymol solution into three large test tubes, A to C, and cap them. Leave them in bright sunlight or artificial light for 24 hours, then record any color change and interpret it.'
+    ],
+    ex: () => `<div class="panel"><p class="label">The three tubes</p>
+        <div class="tw"><table><thead><tr><th>Tube</th><th>Contents</th><th>Role</th></tr></thead><tbody>
+          <tr><th scope="row">A</th><td>Bromothymol blue only</td><td>Control</td></tr>
+          <tr><th scope="row">B</th><td>Bromothymol solution with CO₂</td><td>Shows what CO₂ does with no plant</td></tr>
+          <tr><th scope="row">C</th><td><span class="sp">Elodea</span> sprigs + bromothymol solution with CO₂</td><td>The experimental tube</td></tr>
+        </tbody></table></div>
+      </div>
+      ${outHTML('tube', 'Predict first, then pick a scenario')}
+      <p class="note">These are the usual expected colors, and the handout does not state them. Record what your own tubes show. The dark case is a thought experiment that matches self-assessment question 2.</p>
+      <p class="small">Handout videos: <a href="https://www.youtube.com/watch?v=VYw2csIBngY" target="_blank" rel="noopener">blowing CO₂ into the indicator</a> and <a href="https://www.youtube.com/watch?v=T4SzjSEQpPY" target="_blank" rel="noopener">the Elodea tubes</a>.</p>`,
+    init: () => drawOut('tube'),
+    qs: [
+      { q: 'You blow through a straw into the blue bromothymol solution. It turns…', o: ['Yellow', 'Red', 'Colorless', 'Darker blue'], a: 0, why: 'More dissolved CO₂ turns the indicator from blue to yellow.' },
+      { q: 'Tube B (indicator + CO₂, no plant) is there to show that…', o: ['Elodea makes oxygen', 'CO₂ alone does not turn the solution back to blue', 'Light is not needed', 'The indicator is harmful'], a: 1, why: 'Without the plant there is nothing to remove the CO₂, so any change in Tube C can be credited to Elodea.' },
+      { q: 'After 24 hours in light, Tube C is expected to…', o: ['Stay exactly as yellow as Tube B', 'Move back toward blue as Elodea takes up CO₂', 'Turn red', 'Lose all its color'], a: 1, why: 'Elodea photosynthesizes in the light and takes up CO₂, so the indicator shifts back toward blue.' }
+    ]
+  },
+  {
+    t: 'Starch production', min: 6,
+    pts: [
+      '<strong>Seedlings.</strong> You get two mongo seedlings grown at the same time, temperature, soil type and water conditions. Only the light differs: one grew in the dark, the other in natural light. Observe how the leaves differ and explain why.',
+      '<strong>Leaf test.</strong> One healthy leaf from the lit plant gets part of its blade covered with black paper for 2 hours. Then you strip the leaf of its color and test it with iodine.',
+      'In the presence of starch, I<sub>2</sub>KI turns black or blue-black.',
+      'Safety, not from the handout: ethanol is flammable. Heat it only the way your instructor shows you, usually in a hot water bath and never over an open flame.'
+    ],
+    ex: () => `<div class="panel cloakable" data-cloak="off"><p class="label">Leaf test, step by step</p>${cloakBtn()}
+        <div class="tw"><table><thead><tr><th>Step</th><th>Why it is done</th></tr></thead><tbody>
+          <tr><td>Cover part of the leaf with black paper, 2 hours in light</td><td><button type="button" class="cloak">Blocks light from that part, so the leaf has its own comparison.</button></td></tr>
+          <tr><td>Boil the leaf 10 min in 50 mL distilled water</td><td><button type="button" class="cloak">Softens the leaf so ethanol and iodine can get in (standard rationale, not stated in the handout).</button></td></tr>
+          <tr><td>Boil in 70% ethyl alcohol until bleached</td><td><button type="button" class="cloak">Removes the chlorophyll so the iodine color can be seen.</button></td></tr>
+          <tr><td>Place the leaf in a petri dish</td><td><button type="button" class="cloak">A flat, clear surface for adding the stain and reading the result.</button></td></tr>
+          <tr><td>Add two drops of I₂KI</td><td><button type="button" class="cloak">Detects starch: black or blue-black means starch is present.</button></td></tr>
+        </tbody></table></div>
+      </div>
+      ${outHTML('iod', 'Predict the iodine result')}
+      <p class="small">Handout video: <a href="https://www.youtube.com/watch?v=RVphNXyyhtw" target="_blank" rel="noopener">the starch test</a>.</p>`,
+    init: () => drawOut('iod'),
+    qs: [
+      { q: 'In the iodine test, which color shows starch?', o: ['Clear', 'Black or blue-black', 'Bright green', 'Pink'], a: 1, why: 'The handout notes that I₂KI turns black or blue-black in the presence of starch.' },
+      { q: 'Why is the leaf boiled in ethanol?', o: ['To make starch', 'To remove chlorophyll so the stain shows', 'To add iodine', 'To kill bacteria on the paper'], a: 1, why: 'Ethanol bleaches the leaf, which makes the iodine color easy to see.' },
+      { q: 'Which part of a partly covered leaf should stain blue-black?', o: ['The covered part', 'Neither part', 'The uncovered part that received light', 'Both equally'], a: 2, why: 'Only the part that got light could photosynthesize and store starch.' }
+    ]
+  },
+  {
+    t: 'Rate, controls and self-assessment', min: 7,
+    pts: [
+      'The two experiments measure photosynthesis indirectly: CO₂ uptake (bromothymol blue) and starch made (iodine).',
+      'Other factors you could test (not listed in the handout): light intensity, CO₂ level, temperature, water and chlorophyll.',
+      'A hypothesis follows an “if… then…” pattern, for example: if light is removed, then less starch forms in the leaf.'
+    ],
+    ex: () => `<div class="panel"><p class="label">What is controlled in each experiment</p>
+        <div class="tw"><table><thead><tr><th>Experiment</th><th>What is varied</th><th>Comparison</th></tr></thead><tbody>
+          <tr><th scope="row">Elodea tubes</th><td>Presence of Elodea (and light)</td><td>Tube A and Tube B have no plant</td></tr>
+          <tr><th scope="row">Mongo seedlings</th><td>Light or dark growth</td><td>Same age, temperature, soil and water</td></tr>
+          <tr><th scope="row">Covered leaf</th><td>Light on part of one leaf</td><td>The uncovered part of the same leaf</td></tr>
+        </tbody></table></div>
+      </div>
+      <div><p class="label" style="margin-bottom:10px">Self-assessment, model answers</p>
+        ${cardsHTML([
+          ['1. Why is Elodea not in every tube? Why add light?', 'Tubes A and B are controls. Only Tube C has the plant, so any change there is due to Elodea. Light supplies the energy the light reaction needs.'],
+          ['2. Is CO₂ used by the plant in the dark?', 'No. Without light the light reaction cannot make ATP and NADPH, so the plant does not take up CO₂ for photosynthesis. Conclusion: photosynthesis needs light.'],
+          ['3. Another way to measure the rate?', 'Count the oxygen bubbles an Elodea sprig releases per minute, or measure the amount of starch or biomass produced.'],
+          ['4. Outline a design for that method.', 'Place an Elodea sprig under a lamp at set distances. Count bubbles per minute for each distance with several trials. Keep the sprig size, water, temperature and CO₂ source the same, and include a no-light control.'],
+          ['5. Significance of each solution', 'Bromothymol blue indicates dissolved CO₂. Ethyl alcohol removes chlorophyll from the leaf. I₂KI detects starch (blue-black).']
+        ])}
+        <p class="note" style="margin-top:10px">These are model answers to check against. Put your own results and reasoning into your answer sheet.</p>
+      </div>`,
+    qs: [
+      { q: 'Which of these could measure the rate of photosynthesis?', o: ['Counting oxygen bubbles from Elodea per minute', 'Noting the color of the beaker', 'Weighing the test tube cap', 'Counting petri dishes'], a: 0, why: 'Oxygen output per unit time is a common rate measure. Starch made and CO₂ taken up also work.' },
+      { q: 'In the leaf with black paper, what is the comparison?', o: ['The uncovered part of the same leaf', 'A leaf from another species', 'The ethanol', 'The petri dish'], a: 0, why: 'The uncovered part got light and is the comparison for the covered part.' },
+      { q: 'Which is a testable hypothesis?', o: ['Plants like Elodea.', 'If light is removed, then less starch will form in the leaf.', 'Starch is blue-black.', 'Photosynthesis is nice.'], a: 1, why: 'It states a variable, a prediction and something you can measure.' }
+    ]
+  },
+  {
+    t: 'Lab wrap-up', min: 4,
+    intro: 'Four mixed questions, then the checklist for the answer sheet.',
+    ex: () => `<div class="panel"><p class="label">Before you submit</p>
+        ${todoHTML('x7_1', 'Name, laboratory section, lab instructor, date performed and date submitted are filled in.')}
+        ${todoHTML('x7_2', 'A.1 Bromothymol blue: results and discussion.')}
+        ${todoHTML('x7_3', 'A.2 Elodea sprigs experiment: results and discussion.')}
+        ${todoHTML('x7_4', 'B. Starch production: results and discussion.')}
+        ${todoHTML('x7_5', 'The five self-assessment questions are answered.')}
+        <p class="small">Handout lifted from Duka and Diaz (2007) and Reece et al. (2014), Campbell Biology, 10th ed.</p>
+      </div>`,
+    qs: [
+      { q: 'Tubes A and B in the Elodea experiment are…', o: ['Experimental tubes with plants', 'Controls without Elodea', 'Dark tubes', 'Calvin cycle tubes'], a: 1, why: 'Neither has Elodea. They show what the solution does without the plant.' },
+      { q: 'Which solution detects starch?', o: ['Bromothymol blue', 'I₂KI', 'Ethyl alcohol', 'Distilled water'], a: 1, why: 'I₂KI turns black or blue-black with starch.' },
+      { q: 'Which stage is called the sugar factory?', o: ['Light reaction', 'Calvin cycle', 'Glycolysis', 'Respiration'], a: 1, why: 'The Calvin cycle makes sugar in the stroma.' },
+      { q: 'The two mongo seedlings differ in…', o: ['Soil type', 'Temperature', 'Light condition', 'Water'], a: 2, why: 'They are the same in everything except that one grew in the dark.' }
+    ]
+  }
+];
+
+/* ---------- data and chunks: Exercise 9 (Plant Form and Function) ---------- */
+const LXD = {
+  root: {
+    title: 'Root cross section, outside to inside',
+    note: 'The handout defines xylem and phloem under the monocot root only. Their functions are the same in the dicot root. The handout lists pith for the monocot root only.',
+    sets: {
+      dicot: { name: 'Dicot (Ranunculus)', rows: [
+        ['Epidermis', 'The outermost layer of tissue.', 0],
+        ['Cortex', 'Layer next to the epidermis, composed of several cell layers.', 1],
+        ['Endodermis', 'Found next to the cortex. Composed of a single cell layer.', 2],
+        ['Pericycle', 'Lies next to the endodermis, one to two cell layers. Site where the branch roots arise.', 3],
+        ['Stele (protostele)', 'The primary vascular tissues bounded by the pericycle.', 4],
+        ['Xylem', 'Conducts minerals from the roots to the stem.', 5],
+        ['Phloem', 'Conducts photosynthates from the leaves to other parts of the plant.', 5]
+      ] },
+      monocot: { name: 'Monocot (Zea mays)', rows: [
+        ['Epidermis', 'The outermost layer of tissue.', 0],
+        ['Cortex', 'Layer next to the epidermis, composed of several cell layers.', 1],
+        ['Endodermis', 'Found next to the cortex. Composed of a single cell layer.', 2],
+        ['Pericycle', 'Lies next to the endodermis, one to two cell layers. Site where the branch roots arise.', 3],
+        ['Stele (protostele)', 'The primary vascular tissues bounded by the pericycle.', 4],
+        ['Xylem', 'Conducts minerals from the roots to the stem.', 5],
+        ['Phloem', 'Conducts photosynthates from the leaves to other parts of the plant.', 5],
+        ['Pith', 'Centrally located ground tissue that functions for storage.', 5]
+      ] }
+    }
+  },
+  stem: {
+    title: 'Stem cross section, outside to inside',
+    note: 'Both stem lists are short in the handout. Compare the vascular bundle pattern first: ring in the dicot, scattered in the monocot.',
+    sets: {
+      dicot: { name: 'Dicot (Helianthus)', rows: [
+        ['Epidermis', 'Outer protective layer.', 0],
+        ['Cortex', 'Layer next to the epidermis.', 1],
+        ['Vascular bundle', 'Occurs in a ring pattern. Functions for transport of nutrients.', 2],
+        ['Pith', 'Storage of organic nutrients. Centrally located.', 2]
+      ] },
+      monocot: { name: 'Monocot (Zea mays)', rows: [
+        ['Epidermis', 'Outer protective layer.', 0],
+        ['Cortex', 'Layer next to the epidermis.', 1],
+        ['Vascular bundle', 'Scattered all throughout. Functions for transport of nutrients.', 2]
+      ] }
+    }
+  },
+  leaf: {
+    title: 'Leaf cross section, top to bottom',
+    note: 'The handout only lists these layers. The descriptions below are standard textbook ones, not from the handout. The Zea mays list names a single mesophyll layer.',
+    sets: {
+      dicot: { name: 'Dicot (Ixora)', rows: [
+        ['Upper epidermis', 'Outer layer on the upper (adaxial) surface.', 0],
+        ['Palisade mesophyll', 'Tightly packed, elongated cells under the upper epidermis. Most photosynthesis happens here.', 1],
+        ['Vascular bundle', 'Veins that carry water, minerals and sugars. The midrib holds the largest one.', 1],
+        ['Spongy mesophyll', 'Loosely arranged cells with air spaces for gas exchange.', 1],
+        ['Lower epidermis', 'Outer layer on the lower (abaxial) surface.', 0]
+      ] },
+      monocot: { name: 'Monocot (Zea mays)', rows: [
+        ['Upper epidermis', 'Outer layer on the upper (adaxial) surface.', 0],
+        ['Mesophyll layer', 'The photosynthetic tissue between the epidermis layers.', 1],
+        ['Vascular bundle', 'Veins that carry water, minerals and sugars.', 1]
+      ] }
+    }
+  }
+};
+const LXS = { root: 'dicot', stem: 'dicot', leaf: 'dicot' };
+const lxHTML = id => `<div class="panel cloakable" data-cloak="off"><p class="label">${LXD[id].title}</p>
+    <div class="chips">${Object.keys(LXD[id].sets).map(k => `<button type="button" class="chip" data-lx="${id}" data-k="${k}" aria-pressed="false">${LXD[id].sets[k].name}</button>`).join('')}</div>
+    ${cloakBtn()}
+    <div class="ladder" id="lx-${id}"></div>
+    <p class="note">${LXD[id].note}</p></div>`;
+
+const MET = {
+  root: { name: 'Metamorphosed roots', head: ['Species', 'Distinctive feature', 'Specialized function'], rows: [
+    ['Carrot', 'Enlarged, fleshy taproot', 'Food storage'],
+    ['Sweet potato (kamote)', 'Swollen tuberous roots', 'Food storage'],
+    ['Corn', 'Prop roots from the lower stem', 'Extra support and anchorage'],
+    ['Mangrove', 'Pneumatophores rising out of the mud', 'Gas exchange in waterlogged soil'],
+    ['Orchid', 'Aerial roots', 'Absorb moisture from the air and hold on']
+  ] },
+  stem: { name: 'Metamorphosed stems', head: ['Metamorphosed structure', 'Function', 'Species'], rows: [
+    ['Rhizome', 'Underground horizontal stem, storage and survival', 'Ginger'],
+    ['Tuber', 'Food storage', 'Potato'],
+    ['Bulb', 'Food storage in fleshy scales on a short stem', 'Onion'],
+    ['Corm', 'Food storage', 'Gabi (taro)'],
+    ['Stolon (runner)', 'Spreading and vegetative propagation', 'Strawberry'],
+    ['Tendril', 'Climbing support', 'Passion fruit']
+  ] },
+  leaf: { name: 'Metamorphosed leaves', head: ['Term for specialized structure', 'Function', 'Species'], rows: [
+    ['Tendril', 'Climbing support', 'Garden pea'],
+    ['Spine', 'Protection and less water loss', 'Cactus'],
+    ['Pitcher', 'Traps insects as a nitrogen source', 'Pitcher plant (Nepenthes)'],
+    ['Bract', 'Colorful display that attracts pollinators', 'Bougainvillea'],
+    ['Fleshy leaf', 'Water or food storage', 'Aloe']
+  ] }
+};
+let metK = 'root';
+
+const STEM = `<svg class="tree" viewBox="0 0 560 300" role="img" aria-label="A stem with a terminal bud at the tip, two nodes with leaves and an axillary bud, and an internode between them.">
+  <path class="tl" d="M200 290 V42"/>
+  <path class="tl" d="M200 220 Q140 190 90 205"/>
+  <path class="tl" d="M200 130 Q250 105 300 112"/>
+  <circle class="tn" cx="200" cy="34" r="8"/>
+  <circle class="tn" cx="192" cy="124" r="5"/>
+  <circle cx="200" cy="220" r="4" fill="var(--fg)"/><circle cx="200" cy="130" r="4" fill="var(--fg)"/>
+  <path class="tl" d="M214 34 H322 M208 175 H322 M206 220 H322 M188 124 H150" style="stroke-width:1" />
+  <text class="tt" x="330" y="39">Terminal bud</text>
+  <text class="tt" x="330" y="180">Internode</text>
+  <text class="tt" x="330" y="225">Node (leaf attachment)</text>
+  <text class="tt" x="144" y="129" text-anchor="end">Axillary bud</text>
+  <text class="tm" x="8" y="292">Terminal bud: tip. Axillary bud: at a node.</text>
+</svg>`;
+
+const CH9 = [
+  {
+    t: 'Plant organization', min: 3,
+    pts: [
+      'Organisms show organization at many levels. In plants, cells form tissues, and tissues are united in structured patterns to form organs.',
+      '<strong>Vegetative organs</strong>: roots, stem and leaves. <strong>Reproductive organs</strong>: flowers, fruits and seeds.',
+      'These organs arise from the <strong>root system</strong> and the <strong>shoot system</strong> of the plant.'
+    ],
+    ex: () => `<div class="panel"><p class="label">Levels of organization</p>${tagsHTML(['molecular', 'cellular', 'tissue', 'organ', 'organ-system', 'organism', 'population', 'community'])}</div>
+      <div><p class="label" style="margin-bottom:10px">Regions and directions</p>${cardsHTML([
+        ['Abaxial', 'Lower surface or ventral side in plants.'],
+        ['Adaxial', 'Upper surface or dorsal side in plants.'],
+        ['Apical', 'At or near the tip.'],
+        ['Basal', 'At or near the bottom.'],
+        ['Marginal', 'Pertaining to the border or edge.']
+      ])}</div>`,
+    qs: [
+      { q: 'Adaxial refers to the…', o: ['Lower surface', 'Upper surface', 'Tip', 'Border'], a: 1, why: 'Adaxial is the upper surface (dorsal side). Abaxial is the lower surface.' },
+      { q: 'Which of these is a vegetative organ?', o: ['Flower', 'Fruit', 'Leaf', 'Seed'], a: 2, why: 'The vegetative organs are the root, the stem and the leaves.' },
+      { q: 'Plant organs arise from the…', o: ['Root system and shoot system', 'Flowers and fruits', 'Xylem and phloem', 'Nodes and internodes'], a: 0, why: 'The handout says organs arise from the root system and the shoot system.' }
+    ]
+  },
+  {
+    t: 'Root: outside and tip', min: 5,
+    pts: [
+      '<strong>External morphology.</strong> Get a monocot (grass) and a dicot (mayana) plant. Determine the root system type of each, observe the structures arising from the primary root, then draw both and label the primary and lateral roots.',
+      'Pattern to check against your specimens (not stated in the handout): grasses typically have fibrous root systems and dicots a taproot system.',
+      '<strong>Root tip.</strong> The handout gives a longitudinal section of a <span class="sp">Zea mays</span> root tip at 100x. Locate four regions.'
+    ],
+    ex: () => `<div class="panel cloakable" data-cloak="off"><p class="label">Root tip, from the tip upward</p>${cloakBtn()}
+        <div class="ladder">
+          <div class="rung" style="--i:0"><span class="r">Root cap</span><button type="button" class="cloak">Dead cells at the tip of the root. Provides protection as the root grows.</button></div>
+          <div class="rung" style="--i:1"><span class="r">Cell differentiation</span><button type="button" class="cloak">Composed of meristematic tissue near the root cap.</button></div>
+          <div class="rung" style="--i:2"><span class="r">Elongation</span><button type="button" class="cloak">Rows of newly produced cells as they begin to grow larger.</button></div>
+          <div class="rung" style="--i:3"><span class="r">Maturation</span><button type="button" class="cloak">Cells are differentiated into particular cell types. The area of the root with root hairs.</button></div>
+        </div>
+        <p class="note">The handout calls the meristem region “cell differentiation”. Many textbooks call it the region of cell division. Use your instructor’s term for the quiz.</p>
+      </div>`,
+    qs: [
+      { q: 'Which root tip region carries the root hairs?', o: ['Root cap', 'Region of elongation', 'Region of maturation', 'Region of cell differentiation'], a: 2, why: 'The region of maturation is the area of the root with root hairs.' },
+      { q: 'Dead cells at the tip that protect the growing root form the…', o: ['Root cap', 'Pericycle', 'Cortex', 'Endodermis'], a: 0, why: 'The root cap is made of dead cells and protects the root as it grows.' },
+      { q: 'Which specimen is used for the root tip longitudinal section?', o: ['Ranunculus', 'Zea mays', 'Helianthus', 'Ixora'], a: 1, why: 'The handout uses a Zea mays root tip l.s. at 100x.' }
+    ]
+  },
+  {
+    t: 'Root cross sections', min: 6,
+    intro: 'The dicot root is Ranunculus and the monocot root is Zea mays, both at 100x. Pick one, say what each layer is, then reveal it.',
+    ex: () => lxHTML('root'),
+    init: () => drawLX('root'),
+    qs: [
+      { q: 'Branch roots arise from the…', o: ['Epidermis', 'Cortex', 'Pericycle', 'Pith'], a: 2, why: 'The pericycle is the site where branch roots arise.' },
+      { q: 'Which layer is a single cell layer found next to the cortex?', o: ['Endodermis', 'Epidermis', 'Pericycle', 'Phloem'], a: 0, why: 'The endodermis is composed of a single cell layer next to the cortex.' },
+      { q: 'The handout lists pith for the…', o: ['Dicot root only', 'Monocot root only', 'Both roots', 'Neither root'], a: 1, why: 'Pith is listed for the monocot root: centrally located ground tissue for storage.' }
+    ]
+  },
+  {
+    t: 'Stem: outside', min: 4,
+    pts: [
+      'Examine the stem of the mayana (<span class="sp">Plectranthus</span> sp.). Take a picture and label the terminal bud, nodes, internodes and an axillary bud.',
+      'Examine the stem of kakauati (<span class="sp">Gliricidia sepium</span>). Observe the lenticels along the stem, take a picture and label them.',
+      'Lenticels are small pores on a stem (not defined in the handout).'
+    ],
+    ex: () => `<div class="panel"><p class="label">Parts of a stem</p>${STEM}</div>
+      ${cardsHTML([
+        ['Terminal bud', 'Meristematic region at the tip of the stem.'],
+        ['Nodes', 'Point of leaf attachment along the stem.'],
+        ['Internodes', 'The stretch from one node to another.'],
+        ['Axillary bud', 'Meristematic region at the nodes.']
+      ])}`,
+    qs: [
+      { q: 'A node is…', o: ['The meristematic region at the tip', 'The point of leaf attachment along the stem', 'The stretch between two nodes', 'A pore on the bark'], a: 1, why: 'Nodes are where leaves attach. The stretch between nodes is an internode.' },
+      { q: 'Which plant is examined for lenticels?', o: ['Mayana', 'Sunflower', 'Kakauati', 'Corn'], a: 2, why: 'The handout uses kakauati (Gliricidia sepium).' },
+      { q: 'Axillary buds are found at the…', o: ['Nodes', 'Internodes', 'Root tip', 'Blade'], a: 0, why: 'The axillary bud is the meristematic region at the nodes.' }
+    ]
+  },
+  {
+    t: 'Stem: inside', min: 5,
+    intro: 'The dicot stem is Helianthus and the monocot stem is Zea mays, both at 100x.',
+    ex: () => `${lxHTML('stem')}
+      <div class="panel"><p class="label">Side by side</p>${cmpHTML(['Feature', 'Dicot (Helianthus)', 'Monocot (Zea mays)'], [
+        ['Vascular bundles', 'In a ring pattern', 'Scattered all throughout', true],
+        ['Epidermis', 'Outer protective layer', 'Outer protective layer', false],
+        ['Cortex', 'Layer next to the epidermis', 'Layer next to the epidermis', false],
+        ['Pith', 'Centrally located, stores organic nutrients', 'Not on the handout’s list', true]
+      ])}
+      <p class="note">The lab objectives also ask you to compare primary and secondary growth. The handout does not describe them. In general, primary growth lengthens the plant and secondary growth thickens it.</p></div>`,
+    init: () => drawLX('stem'),
+    qs: [
+      { q: 'Vascular bundles in the dicot stem (Helianthus) are arranged…', o: ['Scattered', 'In a ring', 'In a single central strand', 'Absent'], a: 1, why: 'Dicot stem bundles occur in a ring pattern.' },
+      { q: 'Vascular bundles in the Zea mays stem are…', o: ['Scattered throughout', 'In a ring', 'Only in the pith', 'Only in the epidermis'], a: 0, why: 'Monocot stem bundles are scattered all throughout.' },
+      { q: 'In the dicot stem, the pith…', o: ['Is the outer protective layer', 'Stores organic nutrients and is centrally located', 'Is the site of branch roots', 'Conducts water to the leaves'], a: 1, why: 'The handout lists pith as storage of organic nutrients, centrally located.' }
+    ]
+  },
+  {
+    t: 'Leaf: outside and inside', min: 6,
+    pts: [
+      '<strong>External morphology.</strong> Examine a representative dicot leaf and a monocot leaf, and write down the species. Draw and label the midrib, vein, blade and petiole. Record the differences you see between the two.',
+      'Pattern to check (also behind couplet 1 of the Exercise 8 key): dicot leaves usually have netted veins and monocot leaves parallel veins.',
+      '<strong>Anatomy.</strong> The dicot leaf is <span class="sp">Ixora</span> sp. and the monocot leaf is <span class="sp">Zea mays</span>, both at 100x.'
+    ],
+    ex: () => `<div class="panel"><p class="label">External parts to label</p>${tagsHTML(['midrib', 'vein', 'blade', 'petiole'])}</div>${lxHTML('leaf')}`,
+    init: () => drawLX('leaf'),
+    qs: [
+      { q: 'Which layers appear in the Ixora list but not the Zea mays list?', o: ['Upper epidermis', 'Vascular bundle', 'Palisade and spongy mesophyll', 'Epidermis'], a: 2, why: 'The Zea mays list names a single mesophyll layer.' },
+      { q: 'Which is NOT one of the four external leaf parts to label?', o: ['Midrib', 'Vein', 'Blade', 'Lenticel'], a: 3, why: 'The four are midrib, vein, blade and petiole. Lenticels are on stems.' },
+      { q: 'Which specimen is the dicot leaf cross section?', o: ['Ixora', 'Helianthus', 'Zea mays', 'Ranunculus'], a: 0, why: 'The handout uses Ixora sp. leaf c.s.' }
+    ]
+  },
+  {
+    t: 'Metamorphosed organs', min: 6,
+    intro: 'Each metamorphosed organ table asks for at least 3 species from your area or the display. The examples below are for studying and are not from the handout. Cover the answers and test yourself.',
+    ex: () => `<div class="panel cloakable" data-cloak="off"><p class="label">Pick an organ</p>
+        <div class="chips">${Object.keys(MET).map(k => `<button type="button" class="chip" data-met="${k}" aria-pressed="false">${MET[k].name}</button>`).join('')}</div>
+        ${cloakBtn()}
+        <div class="tw"><table id="metT"></table></div>
+        <p class="note">Column order follows the handout’s tables for that organ.</p>
+      </div>`,
+    init: () => drawMet(),
+    qs: [
+      { q: 'Mangrove pneumatophores are modified…', o: ['Roots for gas exchange', 'Stems for storage', 'Leaves for protection', 'Flowers'], a: 0, why: 'Pneumatophores are roots that rise out of waterlogged mud for gas exchange.' },
+      { q: 'A potato tuber is a modified…', o: ['Root', 'Stem', 'Leaf', 'Fruit'], a: 1, why: 'A tuber is a modified stem used for storage.' },
+      { q: 'Cactus spines are modified…', o: ['Stems', 'Roots', 'Leaves', 'Seeds'], a: 2, why: 'Cactus spines are modified leaves that protect and cut water loss.' }
+    ]
+  },
+  {
+    t: 'Lab wrap-up', min: 4,
+    intro: 'Four mixed questions, then the checklist for the answer sheet.',
+    ex: () => `<div class="panel"><p class="label">Before you submit</p>
+        ${todoHTML('x9_1', 'Name, laboratory section, lab instructor, date performed and date submitted are filled in.')}
+        ${todoHTML('x9_2', 'I. Root: drawings of the monocot and dicot root systems, the root tip, and the dicot and monocot cross sections, all labeled.')}
+        ${todoHTML('x9_3', 'Metamorphosed root table: at least 3 species.')}
+        ${todoHTML('x9_4', 'II. Stem: labeled pictures of the mayana stem and the lenticels, labeled dicot and monocot stem sections.')}
+        ${todoHTML('x9_5', 'Metamorphosed stem table: at least 3 species.')}
+        ${todoHTML('x9_6', 'III. Leaf: labeled drawings of the dicot and monocot leaf, labeled dicot and monocot leaf sections, and your recorded differences.')}
+        ${todoHTML('x9_7', 'Metamorphosed leaf table: at least 3 species.')}
+        <p class="small">Handout adapted from Dickey (2003), Mader (1998) and Soligam-Hadsall et al. (2005).</p>
+      </div>`,
+    qs: [
+      { q: 'Which specimen is the dicot root cross section?', o: ['Zea mays', 'Ranunculus', 'Helianthus', 'Ixora'], a: 1, why: 'The dicot root is Ranunculus sp. root c.s.' },
+      { q: 'How many species does each metamorphosed organ table need at minimum?', o: ['1', '2', '3', '5'], a: 2, why: 'The handout asks for a minimum of 3 species in each table.' },
+      { q: 'Xylem in the monocot root conducts…', o: ['Photosynthates from the leaves', 'Minerals from the roots to the stem', 'Only gases', 'Only pollen'], a: 1, why: 'The handout says xylem conducts minerals from the roots to the stem.' },
+      { q: 'Which pair is correct?', o: ['Dicot stem, Zea mays', 'Monocot leaf, Zea mays', 'Dicot leaf, Helianthus', 'Dicot root, Zea mays'], a: 1, why: 'Zea mays is the monocot. The dicot stem is Helianthus, the dicot leaf is Ixora and the dicot root is Ranunculus.' }
+    ]
+  }
+];
+
+/* ---------- exercises ---------- */
+const EXD = {
+  7: { tab: 'Exercise 7', name: 'Photosynthesis', title: 'Photosynthesis', ch: CH7,
+       lede: 'The handout for the photosynthesis lab, cut into five short chunks. Read a chunk, answer its checks, move on. Your place and answers are kept in this browser.' },
+  8: { tab: 'Exercise 8', name: 'Phylogeny and Systematics', title: 'Phylogeny and Systematics', ch: CH8,
+       lede: 'The handout for the survey of plant and animal families, cut into nine short chunks. Read a chunk, answer its checks, move on. Your place and answers are kept in this browser.' },
+  9: { tab: 'Exercise 9', name: 'Plant Form and Function', title: 'Plant Form and Function', ch: CH9,
+       lede: 'The handout for roots, stems and leaves, cut into eight short chunks. Read a chunk, answer its checks, move on. Your place and answers are kept in this browser.' }
+};
+let EX = S.ex;
+let CH = EXD[EX].ch;
+
+/* ---------- state helpers ---------- */
+const qk = (ex, ci, qi) => (ex === 8 ? '' : 'x' + ex + '-') + ci + '-' + qi;
+const isDone = (i, ex = EX) => EXD[ex].ch[i].qs.every((_, k) => S.ok[qk(ex, i, k)]);
+const ownsKey = (ex, k) => ex === 8 ? !/^x\d/.test(k) : k.startsWith('x' + ex);
+S.cur = S.curs[EX] || 0;
+if (!(S.cur >= 0 && S.cur < CH.length)) S.cur = 0;
+
+let orgI = 4;
+let W = { m: 0, cur: '1', res: null };
+let D = { score: 0, total: 0, cur: null };
+let cA = 'Cnidaria', cB = 'Platyhelminthes';
+let resetArmed = false;
+
+/* ---------- rendering ---------- */
+function renderHead() {
+  const e = EXD[EX];
+  $('#hkick').textContent = 'UP Mindanao · BIO 10 · Exercise ' + EX;
+  $('#htitle').textContent = e.title;
+  $('#hlede').textContent = e.lede;
+  document.title = 'Bio 10 Exercise ' + EX + ' · ' + e.name;
+}
+function renderTabs() {
+  $('#exbar').innerHTML = [7, 8, 9].map(n => {
+    const c = EXD[n].ch.filter((_, i) => isDone(i, n)).length;
+    return `<button type="button" class="extab" data-exn="${n}" aria-pressed="${n === EX}"><span>${EXD[n].tab}: ${EXD[n].name}</span><span class="ct">${c}/${EXD[n].ch.length}</span></button>`;
+  }).join('');
+}
+function renderNav() {
+  const dc = CH.filter((_, i) => isDone(i)).length;
+  $('#nav').innerHTML =
+    `<div class="prog"><p class="pc"><strong>${dc}</strong> of ${CH.length} chunks done</p><div class="bar"><span style="width:${dc / CH.length * 100}%"></span></div></div>
+     <ol class="steps">${CH.map((c, i) => `<li class="step ${isDone(i) ? 'done' : ''}" ${i === S.cur ? 'aria-current="step"' : ''}><button type="button" data-chunk="${i}" aria-label="Chunk ${i + 1}: ${c.t}"><span class="n">${isDone(i) ? '✓' : i + 1}</span><span class="t">${c.t}</span></button></li>`).join('')}</ol>
+     <button type="button" class="linkbtn" data-reset>${resetArmed ? 'Click again to clear progress' : 'Reset progress for this exercise'}</button>`;
+  renderTabs();
+}
+
+function quizHTML(ci) {
+  return `<section class="checks"><p class="label">Check yourself</p>${CH[ci].qs.map((q, qi) =>
+    `<div class="q" data-q="${qi}"><p>${q.q}</p><div class="opts">${q.o.map((o, oi) => `<button type="button" class="opt" data-o="${oi}">${o}</button>`).join('')}</div><p class="fb" aria-live="polite"></p></div>`).join('')}</section>`;
+}
+
+function renderMain() {
+  const c = CH[S.cur];
+  $('#main').innerHTML = `<article class="chunk">
+    <div><p class="eyebrow">Chunk ${S.cur + 1} of ${CH.length} · about ${c.min} min</p><h2>${c.t}</h2></div>
+    ${c.intro ? `<p class="intro">${c.intro}</p>` : ''}
+    ${c.pts ? `<ul class="points">${c.pts.map(p => `<li>${p}</li>`).join('')}</ul>` : ''}
+    ${c.ex ? c.ex() : ''}
+    ${quizHTML(S.cur)}
+    <div class="foot"><button type="button" class="btn" data-go="-1" ${S.cur === 0 ? 'disabled' : ''}>Back</button><span class="stat" id="stat"></span><button type="button" class="btn" id="nextBtn" data-go="1" ${S.cur === CH.length - 1 ? 'disabled' : ''}>Next chunk</button></div>
+  </article>`;
+  $$('#main .q').forEach(q => { const qi = Number(q.dataset.q); if (S.ok[qk(EX, S.cur, qi)]) paintQ(q, qi); });
+  if (c.init) c.init();
+  updateFoot();
+}
+
+function updateFoot() {
+  const n = CH[S.cur].qs.length;
+  const k = CH[S.cur].qs.filter((_, i) => S.ok[qk(EX, S.cur, i)]).length;
+  const st = $('#stat'); if (st) st.textContent = `Checks ${k} of ${n}`;
+  const nb = $('#nextBtn'); if (nb) nb.classList.toggle('primary', k === n);
+}
+
+function paintQ(q, qi) {
+  const def = CH[S.cur].qs[qi];
+  $$('.opt', q).forEach((o, i) => { o.disabled = true; if (i === def.a) o.classList.add('right'); });
+  const fb = $('.fb', q); fb.className = 'fb good'; fb.textContent = 'Correct. ' + def.why;
+}
+
+function answer(b) {
+  const q = b.closest('.q'); const qi = Number(q.dataset.q);
+  const def = CH[S.cur].qs[qi]; const key = qk(EX, S.cur, qi);
+  if (S.ok[key]) return;
+  const oi = Number(b.dataset.o);
+  if (oi === def.a) { S.ok[key] = true; save(); paintQ(q, qi); renderNav(); updateFoot(); }
+  else { b.classList.add('wrong'); b.disabled = true; const fb = $('.fb', q); fb.className = 'fb bad'; fb.textContent = 'Not quite. Try another option.'; }
+}
+
+function go(i) {
+  S.cur = Math.max(0, Math.min(CH.length - 1, i)); save(); resetArmed = false;
+  renderNav(); renderMain();
+  const l = $('.layout'); if (l) l.scrollIntoView({ block: 'start' });
+}
+
+function switchEx(n) {
+  if (n === EX) return;
+  S.curs[EX] = S.cur;
+  EX = n; S.ex = n; CH = EXD[n].ch;
+  S.cur = S.curs[n] || 0;
+  if (!(S.cur >= 0 && S.cur < CH.length)) S.cur = 0;
+  save(); resetArmed = false;
+  renderHead(); renderNav(); renderMain();
+  const l = $('.exbar'); if (l) l.scrollIntoView({ block: 'start' });
+}
+
+/* ---------- interactive pieces ---------- */
+function drawLadder() {
+  const el = $('#ladder'); if (!el) return;
+  const o = ORG[orgI];
+  el.innerHTML = RANKS.map((r, i) => `<div class="rung ${i > 5 ? 'sp-row' : ''}" style="--i:${i}"><span class="r">${r}</span><button type="button" class="cloak">${o.v[i]}</button></div>`).join('');
+  $$('#chips .chip').forEach((c, i) => c.setAttribute('aria-pressed', String(i === orgI)));
+}
+
+function drawWalker() {
+  const el = $('#walk'); if (!el) return;
+  const sp = MYST[W.m];
+  let h = `<p class="label">Specimen</p><p class="spec">${sp.t}</p>`;
+  if (W.res) {
+    const ok = W.res === sp.n;
+    h += `<div class="res ${ok ? 'good' : 'bad'}"><strong>The key says: ${W.res}.</strong> ${ok ? 'That matches the specimen.' : `The specimen is a ${sp.n}. Check the choices you made against its traits.`}</div>`;
+  } else {
+    h += `<p class="label">Pair ${W.cur}</p><div class="opts">${KEY[W.cur].map((c, i) => `<button type="button" class="opt" data-w="${i}">${c[0]}</button>`).join('')}</div>`;
+  }
+  h += `<div class="row"><button type="button" class="btn small" data-wnew>New specimen</button><button type="button" class="btn small" data-wreset>Start over</button></div>`;
+  el.innerHTML = h;
+  $$('#keytext .kc').forEach(k => k.classList.toggle('on', !W.res && k.dataset.c === W.cur));
+}
+
+function newDrill() {
+  const it = PH[rnd(PH.length)];
+  const byGenus = !!it.g && Math.random() < 0.5;
+  const opts = shuffle([it, ...shuffle(PH.filter(x => x !== it)).slice(0, 3)]);
+  D.cur = { it, byGenus, opts, done: false, pick: -1 };
+}
+function drawDrill() {
+  const el = $('#drill'); if (!el) return;
+  if (!D.cur) newDrill();
+  const c = D.cur;
+  el.innerHTML = `<p class="dq">${c.byGenus ? `<span class="sp">${c.it.g}</span> sp. belongs to which phylum?` : `Which phylum is represented by the ${c.it.c}?`}</p>
+    <div class="opts">${c.opts.map((o, i) => `<button type="button" class="opt ${c.done ? (o === c.it ? 'right' : (i === c.pick ? 'wrong' : '')) : ''}" data-d="${i}" ${c.done ? 'disabled' : ''}>${o.p}</button>`).join('')}</div>
+    <div class="row"><span class="score">Score ${D.score} of ${D.total}</span>${c.done ? '<button type="button" class="btn primary small" data-dnext>Next question</button>' : ''}</div>`;
+}
+
+function drawCompare() {
+  const A = $('#selA'), B = $('#selB'); if (!A || !B) return;
+  A.value = cA; B.value = cB;
+  const a = DET[cA], b = DET[cB]; let diff = 0;
+  const rows = FEATS.map((f, i) => { const d = a[i] !== b[i]; if (d) diff++; return `<tr class="${d ? 'diff' : ''}"><th scope="row">${f}${d ? '<span class="ne">differs</span>' : ''}</th><td>${a[i]}</td><td>${b[i]}</td></tr>`; }).join('');
+  $('#cmpT').innerHTML = `<thead><tr><th>Feature</th><th>${cA}</th><th>${cB}</th></tr></thead><tbody>${rows}</tbody>`;
+  $('#cmpN').textContent = diff ? `${diff} of ${FEATS.length} features differ (shaded).` : 'These two phyla share every feature listed here.';
+}
+
+/* Exercise 7: outcome picker */
+function drawOut(id) {
+  const el = $('#out-' + id); if (!el) return;
+  $$('[data-out="' + id + '"]').forEach(c => c.setAttribute('aria-pressed', String(Number(c.dataset.i) === OUT[id])));
+  if (OUT[id] < 0) { el.innerHTML = '<p class="hint">Say your prediction first, then pick a scenario above.</p>'; return; }
+  el.innerHTML = OUTD[id][OUT[id]].cells.map(c => `<div class="ocell"><span class="sw ${c.shape || ''}" style="background:${c.col}" aria-hidden="true"></span><p class="nm">${c.n}</p><p>${c.t}</p></div>`).join('');
+}
+
+/* Exercise 9: layer explorers and metamorphosed table */
+function drawLX(id) {
+  const el = $('#lx-' + id); if (!el) return;
+  const rows = LXD[id].sets[LXS[id]].rows;
+  el.innerHTML = rows.map(r => `<div class="rung" style="--i:${r[2]}"><span class="r">${r[0]}</span><button type="button" class="cloak">${r[1]}</button></div>`).join('');
+  $$('[data-lx="' + id + '"]').forEach(c => c.setAttribute('aria-pressed', String(c.dataset.k === LXS[id])));
+}
+function drawMet() {
+  const t = $('#metT'); if (!t) return;
+  const m = MET[metK];
+  t.innerHTML = `<thead><tr>${m.head.map(h => `<th>${h}</th>`).join('')}</tr></thead><tbody>${m.rows.map(r => `<tr><td>${r[0]}</td><td><button type="button" class="cloak">${r[1]}</button></td><td><button type="button" class="cloak">${r[2]}</button></td></tr>`).join('')}</tbody>`;
+  $$('[data-met]').forEach(c => c.setAttribute('aria-pressed', String(c.dataset.met === metK)));
+}
+
+/* ---------- events ---------- */
+$('#main').addEventListener('click', e => {
+  const t = e.target; let b;
+  if ((b = t.closest('.q .opt'))) { answer(b); return; }
+  if ((b = t.closest('[data-go]'))) { go(S.cur + Number(b.dataset.go)); return; }
+  if ((b = t.closest('[data-cloak-toggle]'))) {
+    const box = b.closest('.cloakable'); const on = box.dataset.cloak === 'on';
+    box.dataset.cloak = on ? 'off' : 'on';
+    b.setAttribute('aria-pressed', String(!on));
+    b.textContent = on ? b.dataset.offText : b.dataset.onText;
+    $$('.cloak.shown', box).forEach(x => x.classList.remove('shown'));
+    return;
+  }
+  if ((b = t.closest('.cloak'))) { const box = b.closest('.cloakable'); if (box && box.dataset.cloak === 'on') b.classList.add('shown'); return; }
+  if ((b = t.closest('[data-org]'))) { orgI = Number(b.dataset.org); drawLadder(); return; }
+  if ((b = t.closest('[data-out]'))) { OUT[b.dataset.out] = Number(b.dataset.i); drawOut(b.dataset.out); return; }
+  if ((b = t.closest('[data-lx]'))) { LXS[b.dataset.lx] = b.dataset.k; drawLX(b.dataset.lx); return; }
+  if ((b = t.closest('[data-met]'))) { metK = b.dataset.met; drawMet(); return; }
+  if ((b = t.closest('[data-w]'))) {
+    const lead = KEY[W.cur][Number(b.dataset.w)][1];
+    if (KEY[lead]) W.cur = lead; else W.res = lead;
+    drawWalker(); return;
+  }
+  if (t.closest('[data-wreset]')) { W.cur = '1'; W.res = null; drawWalker(); return; }
+  if (t.closest('[data-wnew]')) { let m; do { m = rnd(MYST.length); } while (m === W.m); W = { m, cur: '1', res: null }; drawWalker(); return; }
+  if ((b = t.closest('[data-d]'))) {
+    const c = D.cur; if (c.done) return;
+    const i = Number(b.dataset.d); c.done = true; c.pick = i; D.total++; if (c.opts[i] === c.it) D.score++;
+    drawDrill(); const nx = $('[data-dnext]'); if (nx) nx.focus(); return;
+  }
+  if (t.closest('[data-dnext]')) { newDrill(); drawDrill(); return; }
+});
+$('#main').addEventListener('change', e => {
+  const t = e.target;
+  if (t.matches('[data-todo]')) { S.todo[t.dataset.todo] = t.checked; save(); return; }
+  if (t.id === 'selA') { cA = t.value; drawCompare(); return; }
+  if (t.id === 'selB') { cB = t.value; drawCompare(); }
+});
+$('#nav').addEventListener('click', e => {
+  const b = e.target.closest('[data-chunk]'); if (b) { go(Number(b.dataset.chunk)); return; }
+  if (e.target.closest('[data-reset]')) {
+    if (!resetArmed) { resetArmed = true; renderNav(); return; }
+    Object.keys(S.ok).forEach(k => { if (ownsKey(EX, k)) delete S.ok[k]; });
+    Object.keys(S.todo).forEach(k => { if (ownsKey(EX, k)) delete S.todo[k]; });
+    S.cur = 0; save(); resetArmed = false; renderNav(); renderMain();
+  }
+});
+$('#exbar').addEventListener('click', e => {
+  const b = e.target.closest('[data-exn]'); if (b) switchEx(Number(b.dataset.exn));
+});
+
+renderHead();
+renderNav();
+renderMain();
+</script>
+
+</body></html>
